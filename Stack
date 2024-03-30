@@ -1,0 +1,56 @@
+#include <iostream>
+using namespace std;
+
+class stack {
+private:
+    static const int MAX = 5;
+    int top;
+    char items[MAX];
+
+public:
+    stack() {
+        top = -1;
+    }
+
+    void push(char elements) {
+        if (top == MAX + 1) {
+            cout << "Element overflow, tidak bisa mengisi stack" << endl;
+        } else {
+            top++;
+            items[top] = elements;
+            cout << "Element '" <<  elements <<  "' berhasil dimasukkan ke dalam stack" << endl;
+        }
+    }
+
+    char pop() {
+        if (top == -1) {
+            cout << "Stack kosong, tidak dapat mengeluarkan apapun" << endl;
+            return '\0';
+        } else {
+            char removeditem = items[top];
+            top--;
+            cout << "Element '" << removeditem << "' berhasil dikeluarkan dari stack" << endl;
+            return removeditem;
+        }
+    }
+};
+
+int main() {
+    stack stack;
+    
+    stack.push('a');
+    stack.push('b');
+    stack.push('d');
+    stack.push('q');
+    stack.push('j');
+    
+    stack.pop();
+    stack.pop();
+    stack.pop();
+	 
+    
+    
+     
+    
+    return 0;
+}
