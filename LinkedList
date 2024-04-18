@@ -1,0 +1,61 @@
+#include <iostream>
+using namespace std;
+
+class Node{
+    public:
+    char id;
+    Node *next;
+
+    Node(){
+        next = NULL;
+    }
+};
+
+class LinkedList{
+    public:
+    Node *head;
+    Node *tail;
+
+    LinkedList(){
+        head = tail = NULL;
+    }
+
+    void insertToHead(char data){
+
+        Node *node = new Node();
+        node->id = data;
+
+        Node *tmp = head;
+        head = node;
+        node->next = tmp;
+    }
+
+    void insertToTail(char data){
+
+        Node *node = new Node();
+        node->id = data;
+
+        tail->next = node;
+        tail = node;
+
+    }
+
+    void printAll(){
+        if (head!=NULL){
+            Node *tmp = head;
+            do{
+                cout << tmp->id << "->";
+                tmp = tmp->next;
+            } while(tmp!=NULL);
+        }
+    }
+};
+
+int main(){
+
+
+ 
+
+    return 0;
+
+}
