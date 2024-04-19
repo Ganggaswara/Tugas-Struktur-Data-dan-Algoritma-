@@ -51,7 +51,21 @@ class LinkedList{
     }
 };
 
-int main(){
+int main(int argc, char** argv) {
+
+    LinkedList *link1 = new LinkedList();
+
+    Node *node1 = new Node();
+    node1->id = 'A' ;
+
+    link1->head = node1;
+    link1->tail = node1;
+
+    cout << link1->head->id << endl;
+    cout << node1 << endl;
+
+    Node *node2 = new Node();
+    node2->id = 'B';
 
 
  
