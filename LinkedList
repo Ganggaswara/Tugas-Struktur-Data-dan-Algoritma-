@@ -67,9 +67,27 @@ int main(int argc, char** argv) {
     Node *node2 = new Node();
     node2->id = 'B';
 
+    link1->tail->next = node2;
+    link1->tail = node2;
 
- 
+    cout << link1->head->id << endl;
+    cout << link1->tail->id << endl;
 
+    Node *nodeX = new Node();
+    nodeX->id = 'X';
+
+    Node *tmp = link1->head;
+    link1->head = nodeX;
+    nodeX->next = tmp;
+
+    cout << link1->head->id << endl;
+    cout << link1->tail->id << endl;
+
+    link1->printAll();
+    
     return 0;
 
 }
+
+
+ 
