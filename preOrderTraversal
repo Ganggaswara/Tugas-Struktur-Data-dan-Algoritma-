@@ -48,7 +48,7 @@ public:
         }
     }
 
-    void InOrderTraversal() {
+    void preOrderTraversal() {
         preOrderRecursive(root);
     }
 };
